@@ -51,12 +51,11 @@ pipeline {
                             assert storages1cPathList.size() == templatebasesList.size()
                         }
 
-                        env.server1c = server1c.isEmpty() ? "localhost" : server1c
-                        env.serverSql = serverSql.isEmpty() ? "localhost" : serverSql
-                        env.server1cPort = server1cPort.isEmpty() ? "1540" : server1cPort
-                        env.agent1cPort = agent1cPort.isEmpty() ? "1541" : agent1cPort
+                        server1c = server1c.isEmpty() ? "localhost" : server1c
+                        serverSql = serverSql.isEmpty() ? "localhost" : serverSql
+                        server1cPort = server1cPort.isEmpty() ? "1540" : server1cPort
+                        agent1cPort = agent1cPort.isEmpty() ? "1541" : agent1cPort
                         env.sqlUser = sqlUser.isEmpty() ? "sa" : sqlUser
-                        env.sqlPwd = sqlPwd.isEmpty() ? "12345" : sqlUser
                         testbase = null
 
                         // создаем пустые каталоги
